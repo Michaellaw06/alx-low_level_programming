@@ -1,22 +1,19 @@
 #include <stdio.h>
 
 /**
- * main - Program that prints the alphabet in lowercase, excluding 'e' and 'q'.
+ * main - Program that prints all single-digit numbers of base 10, followed by a new line.
  *
  * Return: Always 0.
  */
 int main(void)
 {
-	char letter;
+    char digit;
 
-	for (letter = 'a'; letter <= 'z'; letter++)
-	{
-		if (letter != 'e' && letter != 'q')
-		{
-			putchar(letter);
-		}
-	}
-	putchar('\n');
+    for (digit = '0'; digit <= '9'; digit++)
+    {
+        putchar(digit);
+    }
+    putchar('\n');
 
-	return (0);
+    return (0);
 }
