@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - Program that prints all single-digit numbers of base 10, followed by a new line.
  *
@@ -7,13 +6,13 @@
  */
 int main(void)
 {
-    char digit;
+	char digit;
 
-    for (digit = '0'; digit <= '9'; digit++)
-    {
-        putchar(digit);
-    }
-    putchar('\n');
+	for (digit = '0'; digit <= '9'; digit++)
+	{
+		putchar(digit);
+	}
+	putchar('\n');
 
-    return (0);
+	return (0);
 }
