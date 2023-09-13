@@ -14,7 +14,8 @@ int print_sign(int n) {
 }
 
 int main() {
-    int number = 42; // Replace with the number you want to check
+    int number = 42; /* Replace with the number you want to check */
     int result = print_sign(number);
+    (void)result; // To avoid the "unused variable" warning
     return 0;
 }
