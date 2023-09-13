@@ -32,7 +32,7 @@ int print_sign(int n)
  *
  * Return: Always 0.
  */
-int main(void)
+int print_sign(int n)
 {
 	int number = 42; /* Replace with the number you want to check */
 	int result = print_sign(number);
