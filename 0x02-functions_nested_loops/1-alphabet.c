@@ -14,5 +14,5 @@ void print_alphabet(void)
     }
 
     _putchar('\n');
-    _putchar('\n'); // This line prints two new lines
+    _putchar('\n'); /* This line prints two new lines */
 }
