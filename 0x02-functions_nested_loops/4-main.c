@@ -1,26 +1,18 @@
 #include "main.h"
-
 /**
- * main - Check if _isalpha works
+ * _isalpha - Checks if a character is alphabetic.
+ * @c: The character to check.
  *
- * Return: Always 0
+ * Return: 1 if c is alphabetic, 0 otherwise.
  */
-int main(void)
+int _isalpha(int c)
 {
-    int r;
-
-    r = _isalpha('H');
-    _putchar(r + '0');
-
-    r = _isalpha('o');
-    _putchar(r + '0');
-
-    r = _isalpha(108);
-    _putchar(r + '0');
-
-    r = _isalpha(';');
-    _putchar(r + '0');
-
-    _putchar('\n');
-    return (0);
+    if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+    {
+        return 1; // c is an alphabetic character
+    }
+    else
+    {
+        return 0; // c is not an alphabetic character
+    }
 }
