@@ -1,56 +1,44 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
-  * main - check the code.
-  *
-  * Return: Always 0.
-  */
+ * print_sign - Prints the sign of a number.
+ * @n: The number to check.
+ *
+ * Return: 1 and prints '+' if n is greater than zero,
+ *         0 and prints '0' if n is zero,
+ *        -1 and prints '-' if n is less than zero.
+ */
 int print_sign(int n)
-
 {
+	if (n > 0)
+	{
+		putchar('+');
+		return (1);
+	}
+	else if (n == 0)
+	{
+		putchar('0');
+		return (0);
+	}
+	else
+	{
+		putchar('-');
+		return (-1);
+	}
+}
 
-        int r;
+/**
+ * main - Entry point of the program.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	int number = 42; /* Replace with the number you want to check */
+	int result = print_sign(number);
 
-        r = print_sign(98);
+	(void)result; /* To avoid the "unused variable" warning */
+	putchar('\n'); /* Print a newline character */
 
-        _putchar(',');
-
-        _putchar(' ');
-
-        _putchar(r + '0');
-
-        _putchar('\n');
-
-        r = print_sign(0);
-
-        _putchar(',');
-
-        _putchar(' ');
-
-        _putchar(r + '0');
-
-        _putchar('\n');
-
-        r = print_sign(0xff);
-
-        _putchar(',');
-
-        _putchar(' ');
-
-        _putchar(r + '0');
-
-        _putchar('\n');
-
-        r = print_sign(-1);
-
-        _putchar(',');
-
-        _putchar(' ');
-
-        _putchar(r + '0');
-
-        _putchar('\n');
-
-        return (0);
-
+	return (0);
 }
