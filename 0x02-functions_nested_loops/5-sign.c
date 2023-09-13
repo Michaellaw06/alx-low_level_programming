@@ -13,17 +13,17 @@ int print_sign(int n)
 	if (n > 0)
 	{
 		putchar('+');
-		return (1);
+		return 1;
 	}
 	else if (n == 0)
 	{
 		putchar('0');
-		return (0);
+		return 0;
 	}
 	else
 	{
 		putchar('-');
-		return (-1);
+		return -1;
 	}
 }
 
@@ -32,7 +32,7 @@ int print_sign(int n)
  *
  * Return: Always 0.
  */
-int print_sign(int n)
+int main(void)
 {
 	int number = 42; /* Replace with the number you want to check */
 	int result = print_sign(number);
@@ -40,5 +40,5 @@ int print_sign(int n)
 	(void)result; /* To avoid the "unused variable" warning */
 	putchar('\n'); /* Print a newline character */
 
-	return (0);
+	return 0;
 }
