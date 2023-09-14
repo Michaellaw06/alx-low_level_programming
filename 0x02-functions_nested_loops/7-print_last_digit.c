@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 
 /**
  * print_last_digit - Prints and returns the last digit of a number.
@@ -15,8 +14,6 @@ int print_last_digit(int a)
 
     /* Use `abs()` instead of `last_digit * -1` to comply with the Betty style guide. */
     last_digit = abs(last_digit);
-
-    _putchar(last_digit + '0');
 
     return (last_digit);
 }
