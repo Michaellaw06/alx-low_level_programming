@@ -4,11 +4,6 @@
 int my_isupper(int c);
 
 int main(void)
-{
-    char c = 'A';
-    printf("%c: %d\n", c, my_isupper(c));
-    return (0);
-}
 
 int my_isupper(int c)
 {
