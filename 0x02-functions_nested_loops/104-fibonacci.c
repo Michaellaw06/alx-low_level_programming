@@ -1,47 +1,48 @@
 #include <stdio.h>
 
-unsigned long fibonacci(unsigned long n);
-void print_fibonacci_sequence(int n);
-
 int main(void)
 {
-    unsigned long n = 92;
-    print_fibonacci_sequence(n);
+    int count;
+    unsigned long fib1 = 0, fib2 = 1, sum;
+    unsigned long fib1_half1, fib2_half1, fib2_half2;
+    unsigned long half1, half2;
 
-    return 0;
-}
-
-unsigned long fibonacci(unsigned long n)
-{
-    unsigned long fib1, fib2, sum;
-    unsigned long count;
-
-    fib1 = 0;
-    fib2 = 1;
-
-    if (n <= 1)
-        return n;
-
-    for (count = 2; count <= n; count++)
+    for (count = 0; count < 92; count++)
     {
         sum = fib1 + fib2;
+        printf("%lu, ", sum);
         fib1 = fib2;
         fib2 = sum;
     }
 
-    return fib2;
-}
+    fib1_half1 = fib1 / 10000000000;
+    fib2_half1 = fib2 / 10000000000;
+    fib1_half2 = fib1 % 10000000000;
+    fib2_half2 = fib2 % 10000000000;
 
-void print_fibonacci_sequence(int n)
-{
-    int count;
-    for (count = 0; count < n; count++)
+    for (count = 93; count < 99; count++)
     {
-        printf("%lu", fibonacci(count));
+        half1 = fib1_half1 + fib2_half1;
+        half2 = fib1_half2 + fib2_half2;
 
-        if (count < n - 1)
+        if (fib1_half2 + fib2_half2 > 9999999999)
+        {
+            half1 += 1;
+            half2 %= 10000000000;
+        }
+
+        printf("%lu%lu", half1, half2);
+
+        if (count != 98)
             printf(", ");
+
+        fib1_half1 = fib2_half1;
+        fib1_half2 = fib2_half2;
+        fib2_half1 = half1;
+        fib2_half2 = half2;
     }
 
     printf("\n");
+
+    return (0);
 }
