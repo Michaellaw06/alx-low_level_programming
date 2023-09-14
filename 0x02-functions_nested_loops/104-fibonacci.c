@@ -5,7 +5,7 @@ void print_fibonacci_sequence(int n);
 
 int main(void)
 {
-	unsigned long n = 92; // Number of Fibonacci numbers to print
+	unsigned long n = 92; 
 	print_fibonacci_sequence(n);
 
 	return (0);
