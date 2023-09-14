@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h> // Include this for printf
+#include <stdio.h>
 
 int main(void)
 {
