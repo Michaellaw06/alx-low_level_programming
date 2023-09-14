@@ -1,19 +1,38 @@
-#include "main.h"
+#include <stdio.h>
 
-int print_last_digit(int a) {
-  int last_digit;
+/**
+ * print_last_digit - Prints and returns the last digit of a number.
+ * @number: The input number.
+ *
+ * Return: The value of the last digit.
+ */
+int print_last_digit(int number)
+{
+    /* Ensure the number is positive */
+    if (number < 0)
+    {
+        number = -number;
+    }
 
-  /* Find the last digit of the number. */
-  last_digit = a % 10;
+    /* Get the last digit by taking the remainder when divided by 10 */
+    int last_digit = number % 10;
 
-  /* If the last digit is negative, make it positive. */
-  if (last_digit < 0) {
-    last_digit = last_digit * -1;
-  }
+    /* Print the last digit */
+    printf("The last digit is: %d\n", last_digit);
 
-  /* Print the last digit. */
-  _putchar(last_digit + '0');
+    /* Return the value of the last digit */
+    return last_digit;
+}
 
-  /* Return the last digit. */
-  return last_digit;
+/**
+ * main - Entry point of the program.
+ *
+ * Return: Always returns 0 to indicate success.
+ */
+int main(void)
+{
+    int number = 12345; // Replace with your desired number
+    int last_digit = print_last_digit(number);
+
+    return (0);
 }
