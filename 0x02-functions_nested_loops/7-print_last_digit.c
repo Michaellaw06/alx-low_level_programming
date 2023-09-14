@@ -1,11 +1,13 @@
 #include "main.h"
-#include <stdlib.h>
 
 /**
- * print_last_digit - Prints and returns the last digit of a number.
- * @a: The input number.
+ * print_last_digit - entry point
  *
- * Return: The last digit.
+ * Description: function that prints the last digit of a number.
+ *
+ * @a: number to compute last digit
+ *
+ * Return: last digit
  */
 int print_last_digit(int a)
 {
@@ -13,11 +15,12 @@ int print_last_digit(int a)
 
 	last_digit = a % 10;
 
-	/*
-	 * Use `abs()` instead of `last_digit * -1` to comply with the Betty style
-	 * guide.
-	 */
-	last_digit = abs(last_digit);
+	if (last_digit < 0)
+	{
+		last_digit = -last_digit;
+	}
+
+	_putchar(last_digit + '0');
 
 	return (last_digit);
 }
