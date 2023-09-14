@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 void jack_bauer(void)
 {
   int hour_tens, hour_ones, minute_tens, minute_ones;
