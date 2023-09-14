@@ -1,5 +1,14 @@
 #include <stdio.h>
 
+/**
+ * main - The main function
+ *
+ * Description: This program calculates and prints the first 92 numbers in
+ * the Fibonacci sequence, separated by commas, and then continues with the
+ * remaining numbers in the sequence.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
     int count;
