@@ -34,5 +34,5 @@ int main(void)
     int number = 12345; // Replace with your desired number
     int last_digit = print_last_digit(number);
 
-    return (0);
+    return 0;
 }
