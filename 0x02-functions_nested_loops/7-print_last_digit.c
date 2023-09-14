@@ -9,14 +9,15 @@
  */
 int print_last_digit(int a)
 {
-    int last_digit;
+	int last_digit;
 
-    last_digit = a % 10;
+	last_digit = a % 10;
 
-    /* Use `abs()` instead of `last_digit * -1` to comply with the Betty
-     * style guide.
-     */
-    last_digit = abs(last_digit);
+	/*
+	 * Use `abs()` instead of `last_digit * -1` to comply with the Betty style
+	 * guide.
+	 */
+	last_digit = abs(last_digit);
 
-    return (last_digit);
+	return (last_digit);
 }
