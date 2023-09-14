@@ -6,11 +6,9 @@
  *
  * Return: The value of the last digit.
  */
-int print_last_digit(int number)
-{
+int print_last_digit(int number) {
     /* Ensure the number is positive */
-    if (number < 0)
-    {
+    if (number < 0) {
         number = -number;
     }
 
@@ -29,8 +27,7 @@ int print_last_digit(int number)
  *
  * Return: Always returns 0 to indicate success.
  */
-int main(void)
-{
+int main(void) {
     int number = 12345; // Replace with your desired number
     int last_digit = print_last_digit(number);
 
