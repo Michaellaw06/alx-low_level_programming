@@ -1,22 +1,19 @@
-#include "main.h"
+#include <stdio.h>
 
-/**
- * main - Entry point
- *
- * Return: Always 0.
- */
 int main(void)
 {
-	print_times_table(3);
-	_putchar('\n');
+    int sum = 0;
 
-	print_times_table(5);
-	_putchar('\n');
+    for (int i = 1; i < 1024; i++)
+    {
+        if (i % 3 == 0 || i % 5 == 0)
+        {
+            sum += i;
+        }
+    }
 
-	print_times_table(98);
-	_putchar('\n');
+    printf("If we list all the natural numbers below 10 that are multiples of 3 or 5, we get ");
+    printf("3, 5, 6, and 9. The sum of these multiples is %d.\n", sum);
 
-	print_times_table(12);
-
-	return (0);
+    return (0);
 }
