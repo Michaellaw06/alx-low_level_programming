@@ -1,13 +1,17 @@
-#include "main.h" 
-#include <stdio.h> 
-/** * main - check the code 
-* 
-* Return: Always 0. 
-*/ int main(void) 
-{ 
-int n; n = 402; 
-printf("n=%d\n", n); 
-reset_to_98(&n); 
-printf("n=%d\n", n); 
-return (0); 
+#include <stdio.h>
+
+void reset_to_98(int *n);
+
+int main(void)
+{
+	int num = 10;
+	int *ptr = &num;
+
+	printf("Before: %d\n", *ptr);
+
+	reset_to_98(ptr);
+
+	printf("After: %d\n", *ptr);
+
+	return 0;
 }
