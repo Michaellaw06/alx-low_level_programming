@@ -8,7 +8,7 @@ int charset_length = sizeof(charset) - 1;
 
 srand(time(NULL));
 
-int i;  // Declare 'i' outside the loop as ISO C90 does not allow variable declarations in the loop.
+int i;
 for (i = 0; i < length; i++) {
 password[i] = charset[rand() % charset_length];
     }
