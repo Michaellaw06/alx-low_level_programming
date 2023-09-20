@@ -1,17 +1,16 @@
+#include "main.h"
 #include <stdio.h>
-
-void reset_to_98(int *n);
 
 int main(void)
 {
-	int num = 10;
-	int *ptr = &num;
+    int num = 10;
+    int *ptr = &num;
 
-	printf("Before: %d\n", *ptr);
+    printf("Before update: %d\n", *ptr);
 
-	reset_to_98(ptr);
+    update_to_98(ptr);
 
-	printf("After: %d\n", *ptr);
+    printf("After update: %d\n", *ptr);
 
-	return 0;
+    return 0;
 }
