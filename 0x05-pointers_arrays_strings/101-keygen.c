@@ -16,7 +16,7 @@ password[length] = '\0';
 }
 
 int main() {
-int password_length = 10; // Change this to set the desired password length
+int password_length = 10;
 char password[password_length + 1];
 
 generate_password(password, password_length);
