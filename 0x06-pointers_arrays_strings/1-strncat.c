@@ -20,6 +20,6 @@ char src[] = "world!";
 int n = 5;
 
 printf("Concatenated string: %s\n", _strncat(dest, src, n));
-return 0;
+(return 0);
 }
 
