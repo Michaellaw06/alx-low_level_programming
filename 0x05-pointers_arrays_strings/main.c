@@ -1,16 +1,14 @@
-#include <stdio.h>
-#include "main.h"
-
-int main(void)
-{
-    int num = 10;
-    int *ptr = &num;
-
-    printf("Before: %d\n", *ptr);
-
-    reset_to_98(ptr);
-
-    printf("After: %d\n", *ptr);
-
-    return 0;
+#include <stdio.h> 
+void reset_to_98(int *); 
+/** * main - check the code for Holberton School students. 
+* 
+* Return: Always 0. 
+*/ 
+int main(void) 
+{ 	
+    int n; 	n = 402; 	
+    printf("%d\n", n); 	
+    reset_to_98(&n); 	
+    printf("%d\n", n); 	
+    return (0); 
 }
