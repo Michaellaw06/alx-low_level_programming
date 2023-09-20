@@ -7,7 +7,8 @@ const char charset[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123
 int charset_length = sizeof(charset) - 1;
 int i;
 srand(time(NULL));
-for (i = 0; i < length; i++) {
+for (i = 0; i < length; i++) 
+{
 password[i] = charset[rand() % charset_length];
 }
 
