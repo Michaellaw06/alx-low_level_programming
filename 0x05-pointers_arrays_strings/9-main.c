@@ -9,6 +9,9 @@
 int main(void)
 {
     int i;
+{
+password[i] = charset[rand() % charset_length];
+}
     char s1[98];
     char *ptr;
     ptr = _strcpy(s1, "First, solve the problem. Then, write the code\n");
