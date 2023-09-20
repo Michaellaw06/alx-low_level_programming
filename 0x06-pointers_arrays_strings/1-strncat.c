@@ -17,7 +17,7 @@ char *_strncat(char *dest, char *src, int n) {
 int main() {
     char dest[20] = "Hello, ";
     char src[] = "world!";
-    int n = 5;  // Concatenate at most 5 characters from src
+    int n = 5;
 
     printf("Concatenated string: %s\n", _strncat(dest, src, n));
 
