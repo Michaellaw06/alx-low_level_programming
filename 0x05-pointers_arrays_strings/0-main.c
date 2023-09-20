@@ -10,7 +10,7 @@ int main(void)
 
     printf("Before: %d\n", *ptr);
 
-    update_to_98(ptr);  // Calling the function
+    update_to_98(ptr);
 
     printf("After: %d\n", *ptr);
 
