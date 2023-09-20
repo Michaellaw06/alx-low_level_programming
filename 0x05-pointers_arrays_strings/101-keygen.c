@@ -18,7 +18,7 @@ void generate_password(char *password, int length) {
 
 int main() {
     int password_length = 10;
-    char *password = (char *)malloc((password_length + 1) * sizeof(char));  // Allocate memory for password
+    char *password = (char *)malloc((password_length + 1) * sizeof(char));
     
 
     generate_password(password, password_length);
