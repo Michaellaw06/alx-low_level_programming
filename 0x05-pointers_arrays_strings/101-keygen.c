@@ -13,15 +13,13 @@ void generate_password(char *password, int length) {
         password[i] = charset[rand() % charset_length];
     }
 
-    password[length] = '\0';
+password[length] = '\0';
 }
 
 int main() {
-    int password_length = 15;
-    char *password = (char *)malloc((password_length + 1) * sizeof(char));
-    int i;
-
-    generate_password(password, password_length);
+int password_length = 15;
+char *password = (char *)malloc((password_length + 1) * sizeof(char));
+generate_password(password, password_length);
 
     printf("Generated Password: %s\n", password);
 
