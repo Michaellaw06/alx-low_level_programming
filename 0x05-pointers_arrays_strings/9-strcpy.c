@@ -5,10 +5,8 @@
 void generate_password(char *password, int length) {
 const char charset[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 int charset_length = sizeof(charset) - 1;
-
-srand(time(NULL));
-
 int i;
+srand(time(NULL));
 for (i = 0; i < length; i++) {
 password[i] = charset[rand() % charset_length];
     }
