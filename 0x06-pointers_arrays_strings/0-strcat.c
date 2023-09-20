@@ -1,20 +1,29 @@
 #include "main.h"
 #include <stdio.h>
-char *_strncat(char *dest, char *src, int n)
+char *_strcat(char *dest, char *src)
 {
 int dest_len = 0;
 while (dest[dest_len] != '\0')
 dest_len++;
-for (int i = 0; i < n && src[i] != '\0'; i++)
-dest[dest_len++] = src[i];
+
+int i = 0;
+while (src[i] != '\0')
+{
+dest[dest_len] = src[i];
+dest_len++;
+i++;
+}
+
 dest[dest_len] = '\0';
 (return dest);
 }
-main(void)
+
+int main(void)
 {
-char dest[20] = "Hello, ";
+char dest[30] = "Hello, ";
 char src[] = "world!";
-int n = 5;
-printf("Concatenated string: %s\n", _strncat(dest, src, n));
+printf("Before concatenation: %s\n", dest);
+_strcat(dest, src);
+printf("After concatenation: %s\n", dest);
 (return 0);
 }
