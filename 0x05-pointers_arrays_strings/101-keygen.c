@@ -3,25 +3,27 @@
 #include <time.h>
 
 void generate_password(char *password, int length) {
-const char charset[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-int charset_length = sizeof(charset) - 1;
+    const char charset[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    int charset_length = sizeof(charset) - 1;
+    int i;
 
-srand(time(NULL));
+    srand(time(NULL));
 
-for (int i = 0; i < length; i++) {
-password[i] = charset[rand() % charset_length];
-}
+    for (i = 0; i < length; i++) {
+        password[i] = charset[rand() % charset_length];
+    }
 
 password[length] = '\0';
 }
 
 int main() {
-int password_length = 10; // Change this to set the desired password length
-char password[password_length + 1];
-
+int password_length = 15;
+char *password = (char *)malloc((password_length + 1) * sizeof(char));
 generate_password(password, password_length);
 
-printf("Generated Password: %s\n", password);
+    printf("Generated Password: %s\n", password);
 
-return 0;
+    free(password);
+
+    return 0;
 }
