@@ -15,7 +15,7 @@ i++;
 }
 
 dest[dest_len] = '\0';
-(return dest);
+return dest;
 }
 
 int main(void)
@@ -25,5 +25,5 @@ char src[] = "world!";
 printf("Before concatenation: %s\n", dest);
 _strcat(dest, src);
 printf("After concatenation: %s\n", dest);
-(return 0);
+return (0);
 }
