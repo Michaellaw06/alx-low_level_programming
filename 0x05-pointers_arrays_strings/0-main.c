@@ -1,7 +1,5 @@
-#include "main.h"
 #include <stdio.h>
-
-void update_to_98(int *n);  
+#include "main.h"
 
 int main(void)
 {
@@ -10,7 +8,7 @@ int main(void)
 
     printf("Before: %d\n", *ptr);
 
-    update_to_98(ptr);
+    reset_to_98(ptr);
 
     printf("After: %d\n", *ptr);
 
