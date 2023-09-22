@@ -8,12 +8,9 @@
 * On error, -1 is returned, and errno is set appropriately.
 */
 int _putchar(char c)
-void _putchar(char c)
-void _putchar(char c) 
-{
-write(1, &c, 1);
+
 {
 return (write(1, &c, 1));
 
 }
-}
+
