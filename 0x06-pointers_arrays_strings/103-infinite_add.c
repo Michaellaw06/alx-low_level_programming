@@ -1,10 +1,9 @@
 #include "main.h"
-
 /**
- * rev_string - Reverses an array of characters.
- * @n: Pointer to the array.
- * Return: void
- */
+* rev_string - Reverses an array of characters.
+* @n: Pointer to the array.
+* Return: void
+*/
 void rev_string(char *n)
 {
 int i = 0;
@@ -23,13 +22,13 @@ temp = *(n + j);
 }
 }
 /**
- * infinite_add - Adds two numbers represented as strings.
- * @n1: Pointer to the first number.
- * @n2: Pointer to the second number.
- * @r: Pointer to the buffer.
- * @size_r: Size of the buffer.
- * Return: Pointer to the buffer.
- */
+* infinite_add - Adds two numbers represented as strings.
+* @n1: Pointer to the first number.
+* @n2: Pointer to the second number.
+* @r: Pointer to the buffer.
+* @size_r: Size of the buffer.
+* Return: Pointer to the buffer.
+*/
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 int overflow = 0, i = 0, j = 0, digits = 0;
