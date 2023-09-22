@@ -1,24 +1,23 @@
 #include "main.h"
 /**
-* print_number - main function
-*
-* @n: Function parameter
-*
-* Return: Always 0.
+* print_number - Function to print an integer.
+* @n: The integer to be printed.
 */
 void print_number(int n)
-char *rot13(char *str)
 {
 unsigned int n1;
-n1 = n;
+n1 = (n < 0) ? -n : n;
 if (n < 0)
-{
 _putchar('-');
-n1 = -n;
-}
 if (n1 / 10 != 0)
-{
 print_number(n1 / 10);
-}
 _putchar((n1 % 10) + '0');
+}
+/**
+ * rot13 - Function to apply ROT13 encryption.
+ * @str: The string to be encrypted.
+ * Return: The encrypted string.
+ */
+char *rot13(char *str)
+{
 }
