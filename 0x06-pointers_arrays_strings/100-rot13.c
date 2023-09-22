@@ -1,24 +1,27 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * print_number - Function to print an integer.
- * @n: The integer to be printed.
- */
-void print_number(int n)
-{
-unsigned int n1;
-n1 = (n < 0) ? -n : n;
-if (n < 0)
-_putchar('-');
-if (n1 / 10 != 0)
-print_number(n1 / 10);
-_putchar((n1 % 10) + '0');
-}
-/**
-* rot13 - Function to apply ROT13 encryption.
-* @str: The string to be encrypted.
-* Return: The encrypted string.
+* rot13 - main function
+*
+* @s: String poiner
+*
+* Return: String function
 */
-char *rot13(char *str)
+char *rot13(char *s)
 {
-return (str);
+int k, r;
+char data1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char datarot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+for (k = 0; s[k] != '\0'; k++)
+{
+for (r = 0; r < 52; r++)
+{
+if (s[k] == data1[r])
+{
+s[k] = datarot[r];
+break;
+}
+}
+}
+return (s);
 }
