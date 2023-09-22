@@ -7,6 +7,7 @@
 * Return: Always 0.
 */
 void print_number(int n)
+char *rot13(char *str)
 {
 unsigned int n1;
 n1 = n;
