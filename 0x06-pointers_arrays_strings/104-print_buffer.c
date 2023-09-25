@@ -11,10 +11,9 @@
 */
 void print_buffer(char *b, int size)
 {
-int x;
-int y;
-int z;
+int x, y, z;
 x = 0;
+
 if (size <= 0)
 {
 printf("\n");
@@ -29,7 +28,7 @@ for (z = 0; z < 10; z++)
 if (z < y)
 printf("%02x", *(b + x + z));
 else
-printf("  ");
+printf("  ");
 if (z % 2)
 {
 printf(" ");
@@ -38,7 +37,7 @@ printf(" ");
 for (z = 0; z < y; z++)
 {
 int c = *(b + x + z);
-if (c < 32 || c > 132)
+if (c < 32 || c > 126)
 {
 c = '.';
 }
