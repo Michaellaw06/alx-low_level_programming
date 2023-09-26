@@ -4,6 +4,7 @@
 * main - the main printing funtion
 * less than 4000000.
 * Return: 0.
+*i
 */
 int main(void)
 {
@@ -16,6 +17,7 @@ if (k % 2 == 0)
 sum += k;
 j = k - j;
 ++i;
+++j;
 }
 printf("%ld", sum);
 return (0);
