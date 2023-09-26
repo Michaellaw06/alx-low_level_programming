@@ -4,8 +4,8 @@
 
 int main(void)
 {
-    int pass[100];
-    int i, sum, n;
+    int pass[11];
+    int i, sum;
     sum = 0;
     srand(time(NULL));
 
@@ -13,15 +13,15 @@ int main(void)
     {
         if (i == 10)
         {
-            pass[i] = (2772 - sum) - '0';
-            sum += pass[i] + '0';
-            putchar(pass[i] + '0');
+            pass[i] = (2772 - sum) % 78;
+            sum += pass[i];
+            putchar(pass[i] + 33);  // Adding 33 to get the correct ASCII value for the desired characters
         }
         else
         {
             pass[i] = rand() % 78;
-            sum += (pass[i] + '0');
-            putchar(pass[i] + '0');
+            sum += pass[i];
+            putchar(pass[i] + 33);  // Adding 33 to get the correct ASCII value for the desired characters
         }
     }
 
