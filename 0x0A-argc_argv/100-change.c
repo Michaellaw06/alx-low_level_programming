@@ -3,7 +3,8 @@
 
 int main(int argc, char *argv[])
 {
-	int cents;
+	int cents, num_coins, i;
+	int coins[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
@@ -19,9 +20,7 @@ int main(int argc, char *argv[])
 		return 0;
 	}
 
-	int coins[5] = {25, 10, 5, 2, 1};
-	int num_coins = 0;
-	int i;
+	num_coins = 0;
 
 	for (i = 0; i < 5 && cents > 0; i++)
 	{
