@@ -3,7 +3,7 @@
 
 /**
 * list_len - returns the number of elements in a linked list
-* @h: pointer to the list_t list
+* @head: pointer to the list_t list
 *
 * Return: number of elements in the list
 */
@@ -17,4 +17,3 @@ head = head->next;
 }
 return (count);
 }
-
