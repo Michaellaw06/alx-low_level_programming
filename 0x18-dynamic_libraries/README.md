@@ -1,18 +1,33 @@
-# Dynamic libraries
+# 0x18. C - Dynamic libraries
+## Introduction/Objective
+* To know what a dynamic library is, how it works, how to create one, and how to use it
+* To know what the environment variable **$LD_LIBRARY_PATH** is, and how to use it
+* To know the differences between static and shared libraries
+* To know the Basic usage of **nm**, **ldd**, **ldconfig**
 
-Project done during **Full Stack Software Engineering studies** at **Holberton School**. It aims to learn about dynamic and shared libraries in **C language**.
+## General Requirements
+* Allowed editors: vi, vim, emacs
+* All files is compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
+* All files ends with a new line
+* There is a README.md file, at the root of the folder of the project
+* Codes are compiled using the Betty style
+* The prototypes of all the functions and the prototype of the function **_putchar** are included in the header file **main.h**
+Bash: 
+* Allowed editors: vi, vim, emacs
+* All scripts tested on Ubuntu 20.04 LTS
+* All files ends with a new line
+* The first line of all files are exactly ``#!/bin/bash``
+* A README.md file, at the root of the folder, describing what the script is doing
+* All files are made executable
 
-## Technologies
-* Scripts written in Bash 4.3.11(1)
-* C files are compiled using `gcc 4.8.4`
-* Tested on Ubuntu 14.04 LTS
+### Resources:
+* [The difference between Dynamic and Static library](https://www.youtube.com/watch?v=eW5he5uFBNM) || [How to Create Shared Libraries in C/C++](https://www.youtube.com/watch?v=Slfwk28vhws) || [How to use a Dynamic Library | Shared library](https://www.youtube.com/watch?v=pkMg_df8gHs&t=303s)
 
-## Files
-All of the following files are scripts and programs written in C:
-
-| Filename | Description |
-| -------- | ----------- |
-| `libholberton.s` | Dynamic library that contains many functions |
-| `1-create_dynamic_lib.sh` | Shell script that creates a dynamic library |
-| `100-operations.so` | Dynamic library that contains mathematical functions |
-| `101-make_me_win.sh` | Shell script that injects a C program in order to hack `gm` executable file |
+## List of files required and more:
+| S/N   |       files          |        Description  |
+|:-----:|:--------------------:|:-------------------|
+|  1.   | [libdynamic.so](https://github.com/Dikachis/alx-low_level_programming/blob/master/0x18-dynamic_libraries/libdynamic.so) |Dynamic library **libdynamic.so** whose files contains all the functions enlisted  |
+|  2.   |[main.h](https://github.com/Dikachis/alx-low_level_programming/blob/master/0x18-dynamic_libraries/main.h) | Header file containing all the prototypes of the enlisted functions  |
+|  3.   |[1-create_dynamic_lib.sh](https://github.com/Dikachis/alx-low_level_programming/blob/master/0x09-static_libraries/1-create_dynamic_lib.sh) | A script called 1-create_dynamic_lib.sh that creates a static library called **liball.a** from all the **.c** files that are in the current directory.|
+|  2.   |[100-operations.so](https://github.com/Dikachis/alx-low_level_programming/blob/master/0x18-dynamic_libraries/100-operations.so) | To create a dynamic library that contains C functions that can be called from Python.  |
+|  3.   |[101-make_me_win.sh](https://github.com/Dikachis/alx-low_level_programming/blob/master/0x18-dynamic_libraries/101-make_me_win.sh) | The Giga Millions program. |
