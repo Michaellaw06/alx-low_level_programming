@@ -1,7 +1,3 @@
-/*
- * File: 3-hash_table_set.c
- * Auth: Michael Ndula
-*/
 
 #include "hash_tables.h"
 

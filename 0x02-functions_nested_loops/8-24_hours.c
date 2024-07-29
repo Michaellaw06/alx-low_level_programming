@@ -1,30 +1,23 @@
 #include "main.h"
-
 /**
-* jack_bauer - Prints every minute of the day of Jack Bauer (00:00 to 23:59).
+*jack_bauer - prints each minute of the day
+*
+*Return:returns 0
 */
 void jack_bauer(void)
 {
-int hour_tens, hour_ones, minute_tens, minute_ones;
-for (hour_tens = 0; hour_tens <= 2; hour_tens++)
+int min, hour;
+for (hour = 0; hour <= 23; hour++)
 {
-for (hour_ones = 0; hour_ones <= 9; hour_ones++)
+for (min = 0; min <= 59; min++)
 {
-if ((hour_tens <= 1 && hour_ones <= 9) || (hour_tens == 2 && hour_ones <= 3))
-{
-for (minute_tens = 0; minute_tens <= 5; minute_tens++)
-{
-for (minute_ones = 0; minute_ones <= 9; minute_ones++)
-{
-_putchar(hour_tens + '0');
-_putchar(hour_ones + '0');
+_putchar((hour / 10) + '0');
+_putchar((hour % 10) + '0');
 _putchar(':');
-_putchar(minute_tens + '0');
-_putchar(minute_ones + '0');
-_putchar('\n');
+_putchar((min / 10) + '0');
+_putchar((min % 10) + '0');
+_putchar(10);
 }
 }
-}
-}
-}
+
 }

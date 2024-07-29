@@ -1,8 +1,3 @@
-/*
- * File: 0-hash_table_create.c
- * Auth Michael Ndula
- */
-
 #include "hash_tables.h"
 
 /**

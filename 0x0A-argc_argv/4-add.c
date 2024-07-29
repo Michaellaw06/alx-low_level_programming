@@ -1,55 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
 
 /**
- * check_num - Check if string contains only digits
- * @str: The input string
- *
- * Return: 1 if all characters are digits, 0 otherwise
- */
-int check_num(char *str)
-{
-	unsigned int count = 0;
+*main - adds positive numbers
+*@argc: number of arguments
+*@argv: array of arguments
+*Return: 0 on success, 1 on failure
+*/
 
-	while (count < strlen(str))
-	{
-		if (!isdigit(str[count]))
-			return (0);
-		count++;
-	}
-
-	return (1);
-}
-
-/**
- * main - Entry point, prints the sum of valid integers from arguments
- * @argc: The argument count
- * @argv: The argument vector
- *
- * Return: 0 on success, 1 on error
- */
 int main(int argc, char *argv[])
 {
-	int count;
-	int str_to_int;
-	int sum = 0;
+	int i, j, sum = 0;
 
-	count = 1;
-	while (count < argc)
+	for (i = 1; i < argc; i++)
 	{
-		if (check_num(argv[count]))
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			str_to_int = atoi(argv[count]);
-			sum += str_to_int;
+			if (argv[i][j] < '0' || argv[i][j] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
-		count++;
+
+		sum += atoi(argv[i]);
 	}
 
 	printf("%d\n", sum);

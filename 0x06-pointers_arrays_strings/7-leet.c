@@ -1,26 +1,23 @@
 #include "main.h"
-#include <stdio.h>
 /**
-*leet - main function
-*
-* @n: Function parameter
-*
-*Return: value of n
+* leet - function that encode a string
+*@str:string that will be encoded
+*Return:returns encoded string
 */
-char *leet(char *n)
+
+char *leet(char *str)
 {
-int k, r;
-char s1[] = "aAeEoOtTlL";
-char s2[] = "4433007711";
-for (k = 0; n[k] != '\0'; k++)
-{
-for (r = 0; r < 10; r++)
-{
-if (n[k] == s1[r])
-{
-n[k] = s2[r];
-}
-}
-}
-return (n);
+	int index1 = 0, index2;
+	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
+
+	while (str[++index1])
+	{
+		for (index2 = 0; index2 <= 7; index2++)
+		{
+			if (str[index1] == leet[index2] ||
+			 str[index1] - 32 == leet[index2])
+				str[index1] = index2 + '0';
+		}
+	}
+	return (str);
 }

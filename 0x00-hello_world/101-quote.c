@@ -1,11 +1,10 @@
+#include <stdio.h>
 #include <unistd.h>
-
 /**
-* main - Entry point
+* main - main function in the task
 *
-* Description: Prints a specific string to the standard error
 *
-* Return: Always 1
+*Return: return 1
 */
 int main(void)
 {

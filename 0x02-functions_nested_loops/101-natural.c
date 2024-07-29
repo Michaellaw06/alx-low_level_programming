@@ -1,16 +1,17 @@
 #include <stdio.h>
+/**
+*main - prints count of multiples
+*of 3 or 5 below 1024
+*Return: return 0
+*/
 int main(void)
 {
-int sum = 0;
-int i;
-for (i = 1; i < 1024; i++)
+int n, sum = 0;
+for (n = 0; n < 1024; n++)
 {
-if (i % 3 == 0 || i % 5 == 0)
-{
-sum += i;
+if ((n % 3) == 0 || (n % 5) == 0)
+sum += n;
 }
-}
-printf("natural numbers below 10 that are multiples of 3 or 5");
-printf("3, 5, 6, and 9. The sum of these multiples is %d.\n", sum);
+printf("%d\n", sum);
 return (0);
 }

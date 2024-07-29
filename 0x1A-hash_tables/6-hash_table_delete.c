@@ -1,7 +1,3 @@
-/*
- * File: 6-hash_table_delete.c
- * Auth: Michael Ndula
-*/
 
 #include "hash_tables.h"
 

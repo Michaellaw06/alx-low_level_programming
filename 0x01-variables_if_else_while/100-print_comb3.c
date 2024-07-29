@@ -1,11 +1,10 @@
 #include <stdio.h>
-
 /**
- * main - Prints all possible different combinations of two digits
- *        in ascending order, separated by a comma followed by a space.
- *
- * Return: Always 0.
- */
+*main - Prints all combinations of two digits with,
+* and space followed by new line
+*
+*Return: returns 0
+*/
 int main(void)
 {
 	int digit1, digit2;
@@ -14,6 +13,7 @@ int main(void)
 	{
 		for (digit2 = digit1 + 1; digit2 < 10; digit2++)
 		{
+
 			putchar((digit1 % 10) + '0');
 			putchar((digit2 % 10) + '0');
 
@@ -25,6 +25,5 @@ int main(void)
 		}
 	}
 	putchar('\n');
-
 	return (0);
 }
